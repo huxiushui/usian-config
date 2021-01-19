@@ -44,13 +44,11 @@ public class TimeUtil {
         //如果两个日期的是在同一年，则只需要计算两个日期在一年的天数差；
         //不在同一年，还要加上相差年数对应的天数，闰年有366天
         //不同年
-        if (year1 != year2)
-        {
+        if (year1 != year2) {
             int timeDistance = 0;
             for (int i = year1; i < year2; i++) {
                 //闰年
-                if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0)
-                {
+                if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0) {
                     timeDistance += 366;
                 } else //不是闰年
                 {
